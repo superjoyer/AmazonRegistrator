@@ -1,0 +1,1 @@
+C:\Users\vlad5\Source\Repos\TestCodeFormat\TestCodeFormat.sln /file:Program.cs  /copyright+ /verbose 
