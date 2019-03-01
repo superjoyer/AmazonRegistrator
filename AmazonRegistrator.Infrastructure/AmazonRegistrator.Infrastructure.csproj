@@ -58,16 +58,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\AccountProvider.cs" />
+    <Compile Include="Classes\AccountRepository.cs" />
+    <Compile Include="Classes\CodeParser.cs" />
     <Compile Include="Classes\ConfigFacade.cs" />
     <Compile Include="Classes\FileINIReader.cs" />
     <Compile Include="Classes\AwsConnector.cs" />
     <Compile Include="Classes\AWSHttpFacade.cs" />
+    <Compile Include="Classes\TwilioFacade.cs" />
     <Compile Include="Classes\TwilioSmsReader.cs" />
     <Compile Include="Classes\UtilityFacade.cs" />
     <Compile Include="Interfaces\IConnect.cs" />
+    <Compile Include="Interfaces\IParser.cs" />
     <Compile Include="Interfaces\IProvider.cs" />
+    <Compile Include="Interfaces\IRemoteReader.cs" />
     <Compile Include="Interfaces\ISender.cs" />
     <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\TwilioContent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

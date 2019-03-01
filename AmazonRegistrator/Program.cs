@@ -8,7 +8,9 @@ namespace AmazonRegistrator.Core
         static void Main(string[] args)
         {
             var utility = new UtilityFacade();
-            utility.Login();
+            //utility.LoginToAws();
+
+            utility.GetCode();
 
 
             //Process.Start("http://www.google.com");
