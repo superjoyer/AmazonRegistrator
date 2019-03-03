@@ -4,15 +4,15 @@ namespace AmazonRegistrator.Infrastructure.Classes
 {
     public static class AccountRepository
     {
-        private static Account _loadedAccount;
+        private static Account _currentAccount;
 
-        public static Account LoadedAccount
+        public static Account CurrentAccount
         {
-            get { return _loadedAccount; }
+            get { return _currentAccount; }
             set
             {
-                if (_loadedAccount == value) return;
-                _loadedAccount = value;
+                if (_currentAccount == value) return;
+                _currentAccount = value;
             }
         }
     }

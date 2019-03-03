@@ -1,5 +1,4 @@
-﻿using AmazonRegistrator.Infrastructure.Classes;
-using System;
+﻿using System;
 
 namespace AmazonRegistrator.Core
 {
@@ -7,13 +6,9 @@ namespace AmazonRegistrator.Core
     {
         static void Main(string[] args)
         {
-            var utility = new UtilityFacade();
-            //utility.LoginToAws();
+            var authUtility = new AuthUtility();
+            authUtility.Autentificate();
 
-            utility.GetCode();
-
-
-            //Process.Start("http://www.google.com");
             Console.ReadKey();
         }
     }

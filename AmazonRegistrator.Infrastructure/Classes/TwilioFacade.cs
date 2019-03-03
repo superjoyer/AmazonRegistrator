@@ -22,12 +22,16 @@ namespace AmazonRegistrator.Infrastructure.Classes
             bool isLogin = false;
             try
             {
-                var accountSid = AccountRepository.LoadedAccount.AccountSID;
-                var authToken = AccountRepository.LoadedAccount.AuthToken;
+                var accountSid = AccountRepository.CurrentAccount.AccountSID;
+                var authToken = AccountRepository.CurrentAccount.AuthToken;
+
+                if (string.IsNullOrEmpty(accountSid)) throw new ArgumentNullException("Undefined Account SID ...");
+                if (string.IsNullOrEmpty(authToken)) throw new ArgumentNullException("Undefined Auth Token ...");
+
                 TwilioClient.Init(accountSid, authToken);
                 isLogin = true;
             }
-            catch (Exception e)
+            catch (ArgumentNullException e)
             {
                 Console.WriteLine(e.Message);
             }
@@ -37,16 +41,27 @@ namespace AmazonRegistrator.Infrastructure.Classes
 
 
 
-        public int ReadAccountLastSmsCode()
+        public string ReadAccountLastSmsCode()
         {
-            if (!Login()) throw new Exception("Twilio autentification error.Unidentified user ...");
+            if (!Login()) throw new Exception("Twilio autentification error. Unidentified user ...");
 
             var accountSmsList = _twilioReader.ReadAsList();
             TwilioContent smsText = accountSmsList.LastOrDefault();
 
-            var rawCode = _codeParser.Parse(smsText.Body);
-            int.TryParse(rawCode, out int resultCode);
+            var resultCode = _codeParser.Parse(smsText.Body);
+           // int.TryParse(rawCode, out int resultCode);
             return resultCode;
+        }
+
+
+
+        public DateTime? ReadAccountSmsLastCreatedDate()
+        {
+            if (!Login()) throw new Exception("Twilio autentification error.Unidentified user ...");
+            var accountSmsList = _twilioReader.ReadAsList();
+            TwilioContent lastSms = accountSmsList.LastOrDefault();
+
+            return lastSms.DateCreated;
         }
     }
 }

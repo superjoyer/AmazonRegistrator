@@ -42,10 +42,12 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\AmazonRegistrator\packages\System.IdentityModel.Tokens.Jwt.5.1.2\lib\net451\System.IdentityModel.Tokens.Jwt.dll</HintPath>
     </Reference>
     <Reference Include="System.Net" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -55,28 +57,36 @@
     <Reference Include="Twilio, Version=5.26.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\AmazonRegistrator\packages\Twilio.5.26.1\lib\net451\Twilio.dll</HintPath>
     </Reference>
+    <Reference Include="WebDriver, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\AmazonRegistrator\packages\Selenium.WebDriver.3.141.0\lib\net45\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\AmazonRegistrator\packages\Selenium.Support.3.141.0\lib\net45\WebDriver.Support.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\AccountProvider.cs" />
     <Compile Include="Classes\AccountRepository.cs" />
+    <Compile Include="Classes\AwsAuthLinkProvider.cs" />
+    <Compile Include="Classes\HttpCreator.cs" />
     <Compile Include="Classes\CodeParser.cs" />
     <Compile Include="Classes\ConfigFacade.cs" />
     <Compile Include="Classes\FileINIReader.cs" />
-    <Compile Include="Classes\AwsConnector.cs" />
-    <Compile Include="Classes\AWSHttpFacade.cs" />
+    <Compile Include="Classes\AwsLogginer.cs" />
+    <Compile Include="Classes\AwsFacade.cs" />
     <Compile Include="Classes\TwilioFacade.cs" />
     <Compile Include="Classes\TwilioSmsReader.cs" />
-    <Compile Include="Classes\UtilityFacade.cs" />
+    <Compile Include="Classes\AuthFacade.cs" />
     <Compile Include="Interfaces\IConnect.cs" />
     <Compile Include="Interfaces\IParser.cs" />
     <Compile Include="Interfaces\IProvider.cs" />
     <Compile Include="Interfaces\IRemoteReader.cs" />
     <Compile Include="Interfaces\ISender.cs" />
     <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\HttpAwsResponse.cs" />
     <Compile Include="Models\TwilioContent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />

@@ -1,5 +1,4 @@
 ﻿using AmazonRegistrator.Infrastructure.Interfaces;
-using System;
 using System.Text.RegularExpressions;
 
 namespace AmazonRegistrator.Infrastructure.Classes

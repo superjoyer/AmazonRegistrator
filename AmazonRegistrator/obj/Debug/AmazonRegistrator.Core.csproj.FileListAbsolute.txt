@@ -38,3 +38,7 @@ C:\Users\UBC\Documents\Projects\AmazonRegistrator\AmazonRegistrator\AmazonRegist
 C:\Users\UBC\Documents\Projects\AmazonRegistrator\AmazonRegistrator\AmazonRegistrator\obj\Debug\AmazonRegistrator.Core.csproj.CopyComplete
 C:\Users\UBC\Documents\Projects\AmazonRegistrator\AmazonRegistrator\AmazonRegistrator\obj\Debug\AmazonRegistrator.Core.exe
 C:\Users\UBC\Documents\Projects\AmazonRegistrator\AmazonRegistrator\AmazonRegistrator\obj\Debug\AmazonRegistrator.Core.pdb
+C:\Users\vlad5\GitProjects\AmazonRegistrator\AmazonRegistrator\bin\Debug\WebDriver.dll
+C:\Users\vlad5\GitProjects\AmazonRegistrator\AmazonRegistrator\bin\Debug\WebDriver.Support.dll
+C:\Users\vlad5\GitProjects\AmazonRegistrator\AmazonRegistrator\bin\Debug\WebDriver.xml
+C:\Users\vlad5\GitProjects\AmazonRegistrator\AmazonRegistrator\bin\Debug\WebDriver.Support.xml
