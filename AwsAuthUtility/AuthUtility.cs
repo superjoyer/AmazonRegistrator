@@ -43,7 +43,7 @@ namespace AwsAuthUtility.Core
 
                 Console.WriteLine("Authentication successful\nResponse Code: {0}\nResponse Headers: {1}\n",
                     response.StatusCode, response.ResponseHeaders);
-                authUtility.AwsLogOut();
+                //authUtility.AwsLogOut();
 
                 //await Task.Run(() =>
                 //    {
