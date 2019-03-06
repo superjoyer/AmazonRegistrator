@@ -8,7 +8,7 @@ namespace AwsAuthUtility.Core
         {
             var authUtility = new AuthUtility();
             authUtility.Auth();
-            //Console.ReadKey();
+            Console.ReadKey();
         }
     }
 }
